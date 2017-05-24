@@ -1,5 +1,6 @@
 var webpack = require("webpack"),
 	path = require('path'),
+	ExtractTextPlugin = require("extract-text-webpack-plugin"),
 	HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports ={
 	entry:{index:'./index.js'},
@@ -22,6 +23,23 @@ module.exports ={
                 removeComments: true,
                 collapseWhitespace: true
             }
-	    })
-  	]
+	    }),
+	    new ExtractTextPlugin("style.css")
+  	],
+  	module:{
+  		loaders:[
+  			{ 
+  				test: /\.css$/, 
+  				loader: ExtractTextPlugin.extract({ 
+  						fallback: 'style-loader', 
+  						use: {
+                            loader: 'css-loader',
+                            options:{
+                                minimize: true //css压缩
+                            }
+                        } 
+  					})
+  			}
+  		]
+  	}
 }
