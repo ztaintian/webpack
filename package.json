@@ -1,0 +1,23 @@
+{
+  "name": "ztt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztaintian/webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztaintian/webpack/issues"
+  },
+  "homepage": "https://github.com/ztaintian/webpack#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.0"
+  }
+}
